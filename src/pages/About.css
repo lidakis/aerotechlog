@@ -1,0 +1,200 @@
+/* ============================================
+   ABOUT PAGE STYLES - AeroTechLog
+   ============================================ */
+
+.about-page {
+  padding-top: var(--space-24);
+}
+
+/* Hero */
+.about-hero {
+  padding: var(--space-16) 0;
+  background: var(--gradient-hero);
+  text-align: center;
+}
+
+.about-hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.about-hero h1 {
+  margin-bottom: var(--space-6);
+}
+
+.about-hero p {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  margin: 0 auto;
+}
+
+/* Company Section */
+.about-company {
+  background: var(--bg-primary);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.about-content h2 {
+  margin-bottom: var(--space-6);
+}
+
+.about-content p {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-4);
+  max-width: none;
+}
+
+.about-stats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.about-stat {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-6);
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+}
+
+.about-stat svg {
+  color: var(--color-primary-500);
+}
+
+.about-stat div {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-stat strong {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.about-stat span {
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+}
+
+/* Values */
+.about-values {
+  background: var(--bg-secondary);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+.value-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  text-align: center;
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-base);
+}
+
+.value-card:hover {
+  border-color: var(--color-primary-200);
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+}
+
+.value-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: var(--color-primary-50);
+  color: var(--color-primary-500);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-5);
+}
+
+.value-card h3 {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-3);
+}
+
+.value-card p {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  max-width: none;
+}
+
+/* Location */
+.about-location {
+  background: var(--bg-primary);
+}
+
+.location-card {
+  padding: var(--space-12);
+  background: linear-gradient(135deg, var(--color-primary-50) 0%, var(--bg-card) 100%);
+  border: 1px solid var(--color-primary-100);
+  border-radius: var(--radius-2xl);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.location-content h2 {
+  margin-bottom: var(--space-4);
+}
+
+.location-content p {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-6);
+  max-width: none;
+}
+
+.location-content address {
+  font-style: normal;
+  font-size: var(--text-base);
+  color: var(--text-primary);
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  .about-stats {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .about-stats {
+    flex-direction: column;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}

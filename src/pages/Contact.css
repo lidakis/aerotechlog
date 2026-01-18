@@ -1,0 +1,125 @@
+/* ============================================
+   CONTACT PAGE STYLES - AeroTechLog
+   ============================================ */
+
+.contact-page {
+  padding-top: var(--space-24);
+}
+
+/* Hero */
+.contact-hero {
+  padding: var(--space-16) 0;
+  background: var(--gradient-hero);
+  text-align: center;
+}
+
+.contact-hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-hero h1 {
+  margin-bottom: var(--space-6);
+}
+
+.contact-hero p {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  margin: 0 auto;
+}
+
+/* Contact Info */
+.contact-info {
+  background: var(--bg-primary);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+  margin-bottom: var(--space-16);
+}
+
+.contact-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  text-align: center;
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-base);
+}
+
+.contact-card:hover {
+  border-color: var(--color-primary-200);
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+}
+
+.contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: var(--color-primary-50);
+  color: var(--color-primary-500);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-5);
+}
+
+.contact-card h3 {
+  font-size: var(--text-base);
+  margin-bottom: var(--space-2);
+}
+
+.contact-card p,
+.contact-card a {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  max-width: none;
+}
+
+.contact-card a {
+  color: var(--color-primary-500);
+  font-weight: 500;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+/* CTA */
+.contact-cta {
+  text-align: center;
+  padding: var(--space-12);
+  background: linear-gradient(135deg, var(--color-primary-50) 0%, var(--bg-card) 100%);
+  border: 1px solid var(--color-primary-100);
+  border-radius: var(--radius-2xl);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-cta h2 {
+  margin-bottom: var(--space-4);
+}
+
+.contact-cta p {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  margin: 0 auto var(--space-6);
+  max-width: 500px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
