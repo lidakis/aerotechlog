@@ -457,7 +457,7 @@ export default function Home() {
               </ul>
             </div>
             <div className="showcase-image">
-              <img src="/screenshot-1.png" alt="AeroTechLog Dashboard" />
+              <img src={`${import.meta.env.BASE_URL}screenshot-1.png`} alt="AeroTechLog Dashboard" />
             </div>
           </motion.div>
 
@@ -483,7 +483,7 @@ export default function Home() {
               </ul>
             </div>
             <div className="showcase-image">
-              <img src="/screenshot-2.png" alt="AeroTechLog Defect Management" />
+              <img src={`${import.meta.env.BASE_URL}screenshot-2.png`} alt="AeroTechLog Defect Management" />
             </div>
           </motion.div>
 
@@ -509,7 +509,7 @@ export default function Home() {
               </ul>
             </div>
             <div className="showcase-image">
-              <img src="/screenshot-4.png" alt="AeroTechLog Journey Log" />
+              <img src={`${import.meta.env.BASE_URL}screenshot-4.png`} alt="AeroTechLog Journey Log" />
             </div>
           </motion.div>
         </div>
@@ -526,7 +526,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <img src="/screenshot-5.png" alt="AeroTechLog Fleet Status" />
+              <img src={`${import.meta.env.BASE_URL}screenshot-5.png`} alt="AeroTechLog Fleet Status" />
             </motion.div>
             
             <motion.div 
@@ -586,7 +586,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <img src="/screenshot-3.png" alt="AeroTechLog MEL Database" />
+              <img src={`${import.meta.env.BASE_URL}screenshot-3.png`} alt="AeroTechLog MEL Database" />
             </motion.div>
           </div>
 
