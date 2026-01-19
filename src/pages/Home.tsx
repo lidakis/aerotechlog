@@ -1,10 +1,8 @@
 import { motion } from 'framer-motion'
 import {
-  ArrowRight, ClipboardList, Wrench, AlertTriangle, FileCheck, Plane, Shield, Lock,
-  CheckCircle2, Mail, Server, Clock, Tablet, Cloud, Users, Database,
-  BarChart3, Zap, Globe, Settings, BookOpen, CalendarCheck, RefreshCw, Search,
-  Layers, Radio, UserCheck, HardDrive, Brain, Sparkles, Bell, Smartphone, Building2, Rocket,
-  Trophy, Award, Star, Crown, Medal
+  ArrowRight, AlertTriangle, Shield, Lock, CheckCircle2, Mail, Users,
+  Brain, Bell, Smartphone, Trophy, Award, Star, Crown, Medal, Rocket,
+  Building2, Database, Radio, Clock, Zap, BarChart3, Wrench, Server, Plane, Tablet
 } from 'lucide-react'
 import SEO from '../components/SEO'
 import './Home.css'
