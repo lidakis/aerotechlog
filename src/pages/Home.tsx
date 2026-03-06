@@ -145,6 +145,30 @@ const integrations = [
   { icon: Tablet, title: 'AeroEFB', desc: 'Electronic flight bag', color: '#64748b', featured: false }
 ]
 
+const clients = [
+  {
+    name: 'Aegean Airlines',
+    logo: 'https://logos-world.net/wp-content/uploads/2023/01/Aegean-Airlines-Logo-500x281.png',
+    url: 'https://www.aegeanair.com'
+  },
+  {
+    name: 'Olympic Air',
+    logo: 'https://www.olympicair.com/Media/OlympicAir/logos/logo.svg',
+    url: 'https://www.olympicair.com'
+  },
+  {
+    name: 'Airplan',
+    logo: 'https://www.airplanaviation.gr/portal/templates/yootheme/cache/23/logo-235d3f17.webp',
+    url: 'https://www.airplanaviation.gr'
+  },
+  {
+    name: 'Superior Air S.A.',
+    logo: 'https://www.superior-air.gr/wp-content/uploads/2023/04/Superior-Air-Logo-Transparent.png',
+    url: 'https://www.superior-air.gr',
+    needsBackground: true
+  }
+]
+
 export default function Home() {
 
   const structuredData = {
@@ -653,6 +677,67 @@ export default function Home() {
                   <strong>{integration.title}</strong>
                   <span>{integration.desc}</span>
                 </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Clients Section */}
+      <section className="clients-section section-lg">
+        <div className="container">
+          <motion.div 
+            className="section-header"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            <motion.span className="section-label" variants={fadeInUp}>Trusted Partners</motion.span>
+            <motion.h2 variants={fadeInUp}>
+              Some of our <span className="text-gradient">clients</span>
+            </motion.h2>
+          </motion.div>
+          
+          <motion.div
+            className="clients-grid"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            {clients.map((client, idx) => (
+              <motion.div
+                key={idx}
+                className={`client-logo ${client.needsBackground ? 'client-logo-bg' : ''}`}
+                variants={fadeInUp}
+              >
+                {client.url ? (
+                  <a
+                    href={client.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="client-link"
+                  >
+                    {client.logo ? (
+                      <img src={client.logo} alt={`${client.name} logo`} />
+                    ) : (
+                      <div className="client-logo-placeholder">
+                        <Building2 size={32} />
+                        <span>{client.name}</span>
+                      </div>
+                    )}
+                  </a>
+                ) : (
+                  client.logo ? (
+                    <img src={client.logo} alt={`${client.name} logo`} />
+                  ) : (
+                    <div className="client-logo-placeholder">
+                      <Building2 size={32} />
+                      <span>{client.name}</span>
+                    </div>
+                  )
+                )}
               </motion.div>
             ))}
           </motion.div>
